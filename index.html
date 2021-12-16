@@ -2,25 +2,37 @@
 <html lang="pt-br">
   <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>To Do List</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <header>
-      Minha Lista de Tarefas
+    <header class="card-panel blue-grey lighten-4">
+      <h3>Lista de Tarefas</h2>
     </header>
-    <main>
-      <p id="funcionamento">Clique duas vezes em um item para marcá-lo como completo</p>
-      <input type="text" id="texto-tarefa">
-      <button id="criar-tarefa">Adicionar</button>
+    <main class="card-panel blue-grey lighten-4">
+      <h6 id="funcionamento">Clique duas vezes em um item para marcá-lo como completo.</h6>
+      <div class="input-field col s6">
+        <i class="material-icons prefix">event_note</i>
+        <input type="text" id="texto-tarefa" class="validate">
+        <label for="texto-tarefa">Tarefa</label>
+      </div>
+      <div class="row cont1">
+        <button id="criar-tarefa" class="waves-effect waves-light btn"><i class="material-icons left">add_circle</i> Adicionar</button>
+      </div>
       <ol id="lista-tarefas"></ol>
-      <button id="remover-selecionado">x</button>
-      <button id="mover-cima">↑</button>
-      <button id="mover-baixo">↓</button>
-      <button id="remover-finalizados">Limpar completos</button>
-      <button id="apaga-tudo">Limpar lista</button> 
-      <button id="salvar-tarefas">Salvar Lista</button>
+      <button id="mover-cima" class="waves-effect waves-light btn-small blue lighten-1"><i class="material-icons">arrow_upward</i></button>
+      <button id="mover-baixo" class="waves-effect waves-light btn-small blue lighten-1"><i class="material-icons">arrow_downward</i></button>
+      <button id="remover-selecionado" class="waves-effect waves-light btn-small  red lighten-1"><i class="material-icons">clear</i></button>
+      <button id="remover-finalizados" class="waves-effect waves-light btn-small red lighten-1">Limpar completos</button>
+      <button id="apaga-tudo" class="waves-effect waves-light btn-small red lighten-1">Limpar lista</button> 
+      <button id="salvar-tarefas" class="waves-effect waves-light btn-small teal lighten-1">Salvar Lista</button>
     </main>
+    <footer>Desenvolvido por Rafael de Jesus Lima.</footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
